@@ -26,6 +26,8 @@ QUESTIONS: dict[str, list[str]] = {
     ],
 
 }
+num_correct = 0
+num = 0
 print('Welcome to Python Quiz', '\n', '****************')
 for num, (question, alternatives) in enumerate(QUESTIONS.items(), start=1):
     print(f"\nQuestion {num}: ")
@@ -38,6 +40,9 @@ for num, (question, alternatives) in enumerate(QUESTIONS.items(), start=1):
     answer_label = input("\nChoice? ")
     answer = labeled_alternatives.get(answer_label)
     if answer == correct_answer:
+        num_correct += 1
         print("⭐️ Correct! ⭐️")
     else:
         print(f"The answer is {correct_answer!r}, not {answer!r}")
+
+print(f"\nYou got {num_correct} correct out of {num} questions")
