@@ -17,7 +17,14 @@ QUESTIONS: dict[str, list[str]] = {
     ],
     "What does dict.get(key) return if key isn't found in dict": [
         'None', 'key', 'True', 'False'
-    ]
+    ],
+    "How do you iterate over both indices and elements in an iterable": [
+        "enumerate(iterable)",
+        "enumerate(iterable, start=1)",
+        "range(iterable)",
+        "range(iterable, start=1)",
+    ],
+
 }
 print('Welcome to Python Quiz', '\n', '****************')
 for num, (question, alternatives) in enumerate(QUESTIONS.items(), start=1):
