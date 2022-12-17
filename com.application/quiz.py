@@ -25,29 +25,31 @@ QUESTIONS: dict[str, list[str]] = {
         "range(iterable, start=1)",
     ],
     "What's the official name of the := operator": [
-        'Assignment expression'
-        'Named expression'
-        'Walrus operator'
-        'Colon equals operator'
+        'Walrus operator',
+        'Assignment expression',
+        'Named expression',
+        'Colon equals operator',
     ]
 
 }
+print('Welcome to Python Quiz', '\n', '****************')
 num_correct = 0
 num = 0
-print('Welcome to Python Quiz', '\n', '****************')
 for num, (question, alternatives) in enumerate(QUESTIONS.items(), start=1):
-    print(f"\nQuestion {num}: ")
+    print(f"\nQuestion {num}:")
     print(f"{question}?")
     correct_answer = alternatives[0]
     labeled_alternatives = dict(zip(ascii_lowercase, sorted(alternatives)))
     for label, alternative in labeled_alternatives.items():
-        print(f" {label}) {alternative}")
+        print(f"  {label}) {alternative}")
 
-    answer_label = input("\nChoice? ")
-    answer = labeled_alternatives.get(answer_label)
+    while (answer_label := input("\nChoice? ")) not in labeled_alternatives:
+        print(f"Please answer one of {', '.join(labeled_alternatives)}")
+
+    answer = labeled_alternatives[answer_label]
     if answer == correct_answer:
         num_correct += 1
-        print("⭐️ Correct! ⭐️")
+        print("⭐ Correct! ⭐")
     else:
         print(f"The answer is {correct_answer!r}, not {answer!r}")
 
