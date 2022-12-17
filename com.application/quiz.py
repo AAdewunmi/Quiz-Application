@@ -24,6 +24,12 @@ QUESTIONS: dict[str, list[str]] = {
         "range(iterable)",
         "range(iterable, start=1)",
     ],
+    "What's the official name of the := operator": [
+        'Assignment expression'
+        'Named expression'
+        'Walrus operator'
+        'Colon equals operator'
+    ]
 
 }
 num_correct = 0
