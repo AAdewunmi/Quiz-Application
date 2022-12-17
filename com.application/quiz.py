@@ -29,6 +29,12 @@ QUESTIONS: dict[str, list[str]] = {
         'Assignment expression',
         'Named expression',
         'Colon equals operator',
+    ],
+    "What's one effect of calling random.seed(42)": [
+        "The random numbers are reproducible.",
+        "The random numbers are more random.",
+        "The computer clock is reset.",
+        "The first random number is always 42.",
     ]
 
 }
