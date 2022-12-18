@@ -3,7 +3,7 @@
 import random
 from string import ascii_lowercase
 
-NUM_QUESTIONS_PER_QUIZ = 8
+NUM_QUESTIONS_PER_QUIZ = 1
 QUESTIONS: dict[str, list[str]] = {
     "When was the first known use of the word 'quiz'": ['1781', '1771', '1871', '1881'],
     "Which built-in function can get information from the user": ['input', 'get', 'print', 'write'],
@@ -47,8 +47,6 @@ QUESTIONS: dict[str, list[str]] = {
 
 }
 
-print('Welcome to Python Quiz', '\n', '****************')
-
 
 def prepare_questions(questions, num_questions):
     num_questions = min(num_questions, len(questions))
@@ -78,6 +76,19 @@ def ask_question(question, alternatives):
     else:
         print(f"The answer is {correct_answer!r}, not {answer!r}")
         return 0
+
+
+def run_quiz():
+    questions = prepare_questions(
+        QUESTIONS, num_questions=NUM_QUESTIONS_PER_QUIZ
+    )
+    num_correct = 0
+    num = 0
+    for num, (question, alternatives) in enumerate(questions, start=1):
+        print(f"\nQuestion {num}:")
+        num_correct += ask_question(question, alternatives)
+
+    print(f'\nYou got {num_correct} correct out of {num} questions')
 
 # num_questions = min(NUM_QUESTIONS_PER_QUIZ, len(QUESTIONS))
 # questions = random.sample(list(QUESTIONS.items()), k=num_questions)
