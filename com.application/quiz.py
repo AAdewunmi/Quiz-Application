@@ -38,6 +38,12 @@ QUESTIONS: dict[str, list[str]] = {
         "The random numbers are more random.",
         "The computer clock is reset.",
         "The first random number is always 42.",
+    ],
+    "When does __name__ == '__main__' equal True in a Python file": [
+        "When the file is run as a script",
+        "When the file is imported as a module",
+        "When the file has a valid name",
+        "When the file only has one function",
     ]
 
 }
