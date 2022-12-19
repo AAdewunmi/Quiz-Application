@@ -15,6 +15,7 @@ You first choose a topic for your questions. Then, for each question, you’ll c
 ## 2. Tech Stack:
 
 - Python 3
+- tomli 2.0.1 
 - TOML (Tom's Obvious Minimal Language)
 
 ## 3. What is the MVP?
