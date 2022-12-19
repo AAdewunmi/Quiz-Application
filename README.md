@@ -15,6 +15,7 @@ You first choose a topic for your questions. Then, for each question, you’ll c
 ## 2. Tech Stack:
 
 - Python 3
+- TOML (Tom's Obvious Minimal Language)
 
 ## 3. What is the MVP?
 The minimal viable product is an application that renders in a console, which allows users to ask questions and get answers.
