@@ -4,15 +4,14 @@ import pathlib
 import random
 from string import ascii_lowercase
 
-import tomli
-# try:
-#     import tomllib
-# except ModuleNotFoundError:
-#     import tomli as tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 
 NUM_QUESTIONS_PER_QUIZ = 11
 QUESTIONS_PATH = pathlib.Path(__file__).parent / "/Users/adrianadewunmi/PyCharm/GitHub_Projects/Quiz-Application/com.application/questions.toml"
-QUESTIONS = tomli.loads(QUESTIONS_PATH.read_text())
+QUESTIONS = tomllib.loads(QUESTIONS_PATH.read_text())
 
 
 def prepare_questions(questions, num_questions):
@@ -47,13 +46,13 @@ def ask_question(question, alternatives):
 
 def run_quiz():
     questions = prepare_questions(
-        QUESTIONS, num_questions=NUM_QUESTIONS_PER_QUIZ
+        QUESTIONS_PATH, num_questions=NUM_QUESTIONS_PER_QUIZ
     )
     num_correct = 0
     num = 0
-    for num, (question, alternatives) in enumerate(questions, start=1):
+    for num, question in enumerate(questions, start=1):
         print(f"\nQuestion {num}:")
-        num_correct += ask_question(question, alternatives)
+        num_correct += ask_question(question)
 
     print(f'\nYou got {num_correct} correct out of {num} questions')
 
