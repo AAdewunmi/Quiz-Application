@@ -18,6 +18,13 @@ You first choose a topic for your questions. Then, for each question, you’ll c
 - tomli 2.0.1 
 - TOML (Tom's Obvious Minimal Language)
 
+⭐️ tomllib: You will need Python 3.11 installed to use the tomllib module.
+```
+$ pip install tomllib
+ERROR: Could not find a version that satisfies the requirement tomllib (from versions: none)
+ERROR: No matching distribution found for tomllib
+```
+
 ## 3. What is the MVP?
 The minimal viable product is an application that renders in a console, which allows users to ask questions and get answers.
 
