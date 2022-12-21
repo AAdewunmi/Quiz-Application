@@ -10,7 +10,8 @@ except ModuleNotFoundError:
     import tomli as tomllib
 
 NUM_QUESTIONS_PER_QUIZ = 11
-QUESTIONS_PATH = pathlib.Path(__file__).parent / "/Users/adrianadewunmi/PyCharm/GitHub_Projects/Quiz-Application/com.application/questions.toml"
+QUESTIONS_PATH = pathlib.Path(
+    __file__).parent / "/Users/adrianadewunmi/PyCharm/GitHub_Projects/Quiz-Application/com.application/questions.toml"
 QUESTIONS = tomllib.loads(QUESTIONS_PATH.read_text())
 
 
@@ -32,11 +33,12 @@ def get_answer(question, alternatives):
     return labeled_alternatives[answer_label]
 
 
-def ask_question(question, alternatives):
-    correct_answer = alternatives[0]
+def ask_question(question):
+    correct_answer = question["answer"]
+    alternatives = [question["answer"]] + question["alternatives"]
     ordered_alternatives = random.sample(alternatives, k=len(alternatives))
 
-    answer = get_answer(question, ordered_alternatives)
+    answer = get_answer(question["question"], ordered_alternatives)
     if answer == correct_answer:
         print("⭐ Correct! ⭐")
         return 1
@@ -49,13 +51,14 @@ def run_quiz():
     questions = prepare_questions(
         QUESTIONS_PATH, num_questions=NUM_QUESTIONS_PER_QUIZ
     )
+
     num_correct = 0
     num = 0
     for num, question in enumerate(questions, start=1):
         print(f"\nQuestion {num}:")
         num_correct += ask_question(question)
 
-    print(f'\nYou got {num_correct} correct out of {num} questions')
+    print(f"\nYou got {num_correct} correct out of {num} questions")
 
 
 if __name__ == "__main__":
