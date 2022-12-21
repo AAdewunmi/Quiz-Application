@@ -14,9 +14,10 @@ QUESTIONS_PATH = pathlib.Path(__file__).parent / "/Users/adrianadewunmi/PyCharm/
 QUESTIONS = tomllib.loads(QUESTIONS_PATH.read_text())
 
 
-def prepare_questions(questions, num_questions):
+def prepare_questions(path, num_questions):
+    questions = tomllib.loads(path.read_text())["questions"]
     num_questions = min(num_questions, len(questions))
-    return random.sample(list(questions.items()), k=num_questions)
+    return random.sample(questions, k=num_questions)
 
 
 def get_answer(question, alternatives):
