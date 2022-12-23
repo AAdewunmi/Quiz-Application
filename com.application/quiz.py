@@ -21,7 +21,7 @@ def prepare_questions(path, num_questions):
     return random.sample(questions, k=num_questions)
 
 
-def get_answer(question, alternatives):
+def get_answers(question, alternatives):
     print(f"{question}?")
     labeled_alternatives = dict(zip(ascii_lowercase, alternatives))
     for label, alternative in labeled_alternatives.items():
