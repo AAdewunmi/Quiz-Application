@@ -21,16 +21,19 @@ def prepare_questions(path, num_questions):
     return random.sample(questions, k=num_questions)
 
 
-def get_answers(question, alternatives):
+def get_answers(question, alternatives, num_choices=1):
     print(f"{question}?")
     labeled_alternatives = dict(zip(ascii_lowercase, alternatives))
     for label, alternative in labeled_alternatives.items():
         print(f"    {label}) {alternative}")
 
-    while (answer_label := input("\nChoice? ")) not in labeled_alternatives:
-        print(f"Please answer one of {', '.join(labeled_alternatives)}")
+    while True:
+        plural_s = "" if num_choices == 1 else f"s (choose {num_choices})"
+        answer = input(f"\nChoice{plural_s}? ")
+        answers = set(answer.replace(",", " ").split())
 
-    return labeled_alternatives[answer_label]
+
+        return [labeled_alternatives[answer] for answer in answers]
 
 
 def ask_question(question):
