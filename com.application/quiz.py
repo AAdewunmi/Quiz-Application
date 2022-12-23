@@ -47,16 +47,20 @@ def get_answers(question, alternatives, num_choices=1):
 
 
 def ask_question(question):
-    correct_answer = question["answer"]
-    alternatives = [question["answer"]] + question["alternatives"]
+    correct_answers = question["answers"]
+    alternatives = question["answers"] + question["alternatives"]
     ordered_alternatives = random.sample(alternatives, k=len(alternatives))
 
-    answer = get_answer(question["question"], ordered_alternatives)
-    if answer == correct_answer:
+    answers = get_answers(
+        question = question["question"],
+        alternatives = ordered_alternatives,
+        num_choices = len(correct_answers),)
+    if set(answers) == set(correct_answers):
         print("⭐ Correct! ⭐")
         return 1
     else:
-        print(f"The answer is {correct_answer!r}, not {answer!r}")
+        is_or_are = " is" if len(correct_answers) == 1 else "s are"
+        print("\n- ".join([f"No, the answer{is_or_are}:"] + correct_answers))
         return 0
 
 
