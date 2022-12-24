@@ -52,9 +52,9 @@ def ask_question(question):
     ordered_alternatives = random.sample(alternatives, k=len(alternatives))
 
     answers = get_answers(
-        question = question["question"],
-        alternatives = ordered_alternatives,
-        num_choices = len(correct_answers),)
+        question=question["question"],
+        alternatives=ordered_alternatives,
+        num_choices=len(correct_answers), )
     if set(answers) == set(correct_answers):
         print("⭐ Correct! ⭐")
         return 1
