@@ -81,3 +81,19 @@ alternatives = [
     "A Potentially Epic Prize",
     ]
 hint = "PEPs are used to evolve Python."
+
+[[questions]]
+question = "What's a PEP"
+answers = ["A Python Enhancement Proposal"]
+alternatives = [
+    "A Pretty Exciting Policy",
+    "A Preciously Evolved Python",
+    "A Potentially Epic Prize",
+]
+hint = "PEPs are used to evolve Python."
+explanation = """
+    Python Enhancement Proposals (PEPs) are design documents that provide
+    information to the Python community. PEPs are used to propose new features
+    for the Python language, to collect community input on an issue, and to
+    document design decisions made about the language.
+"""
