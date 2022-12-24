@@ -19,6 +19,8 @@ First you get a set of questions. Then, for each question, you’ll choose an an
 - tomli 2.0.1 
 - TOML (Tom's Obvious Minimal Language)
 
+⭐️ Configure path to *.toml file in *.py file
+
 ⭐️ tomllib: You will need Python 3.11 installed to use the tomllib module.
 ```
 $ pip install tomllib

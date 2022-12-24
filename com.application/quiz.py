@@ -35,7 +35,7 @@ def get_answers(question, alternatives, num_choices=1, hint=None):
         answer = input(f"\nChoice{plural_s}? ")
         answers = set(answer.replace(",", " ").split())
 
-        # Handle
+        # Handle hints
         if hint and "?" in answers:
             print(f"\nHINT: {hint}")
             continue
