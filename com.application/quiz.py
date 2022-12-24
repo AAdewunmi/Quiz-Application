@@ -54,7 +54,8 @@ def ask_question(question):
     answers = get_answers(
         question=question["question"],
         alternatives=ordered_alternatives,
-        num_choices=len(correct_answers), )
+        num_choices=len(correct_answers),
+        hint=question.get("hint"),)
     if set(answers) == set(correct_answers):
         print("⭐ Correct! ⭐")
         return 1

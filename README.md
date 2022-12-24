@@ -2,15 +2,16 @@
 
 # Project Title:
 
-Quiz application
+Python quiz application
 
 ## 1. What is the project?
 
-Python quiz application for the terminal.
+Python programming language quiz application for the terminal.
 
-In this step-by-step project, we’ll build a terminal application that can quiz you and your friends on a range of topics.
+In this step-by-step project, we’ll build a terminal application that can quiz you and your friends on a range of topics
+revolving around Python programming language.
 
-You first choose a topic for your questions. Then, for each question, you’ll choose an answer from a set of alternatives. Some questions may have multiple correct answers. You can access a hint to help you along the way. After answering a question, you’ll read an explanation that can provide more context for the answer.
+First you get a set of questions. Then, for each question, you’ll choose an answer from a set of alternatives. Some questions may have multiple correct answers. You can access a hint to help you along the way. After answering a question, you’ll read an explanation that can provide more context for the answer.
 
 ## 2. Tech Stack:
 
