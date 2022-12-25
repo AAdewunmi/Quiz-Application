@@ -118,3 +118,16 @@ explanation = """
     There is no built-in @docstring decorator. Many functions naturally return
     strings. Such a feature can therefore not be used for docstrings.
 """
+
+[[python.questions]]
+    question = "When was the first public version of Python released"
+    answers = ["February 1991"]
+    alternatives = ["January 1994", "October 2000", "December 2008"]
+    hint = "The first public version was labeled version 0.9.0."
+    explanation = """
+    Guido van Rossum started work on Python in December 1989. He posted
+    Python v0.9.0 to the alt.sources newsgroup in February 1991. Python
+    reached version 1.0.0 in January 1994. The next major versions,
+    Python 2.0 and Python 3.0, were released in October 2000 and December
+    2008, respectively.
+    """
