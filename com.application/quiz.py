@@ -21,7 +21,7 @@ def prepare_questions(path, num_questions):
         topic["label"]: topic["questions"] for topic in topic_info.values()
     }
     topic_label = get_answers(
-        question="Which topic do you want to be quizzed about?",
+        question="Which topic do you want to be quizzed about",
         alternatives=sorted(topics)
     )[0]
     questions = topics[topic_label]

@@ -28,7 +28,7 @@ ii. Open project folder
 iii. Explore
 
 
-## 4. How To Use:
+## 4. Dependencies:
 
 ⭐️ Configure path to *.toml file in *.py file
 
@@ -38,21 +38,24 @@ $ pip install tomllib
 ERROR: Could not find a version that satisfies the requirement tomllib (from versions: none)
 ERROR: No matching distribution found for tomllib
 ```
-- Run quiz.py 
+
+
+## 5. How To Use:
+- Run quiz.py (Either in IDE or Command line)
 
 > First choose a topic, then you get a set of questions. Then, for each question, you’ll choose an answer from a set of alternatives. Some questions may have multiple correct answers. You can access a hint to help you along the way. After answering a question, you’ll read an explanation that can provide more context for the answer.
 
 
-## 5. Demo:
+## 6. Demo:
 
 ![Screenshot 2022-12-25 at 10 40 27](https://user-images.githubusercontent.com/15172744/209464808-19ce300d-1702-4675-9743-4ac59542a5d4.png)
 
-## 6. Contributing:
+## 7. Contributing:
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
-## 7. Original Creator:
+## 8. Original Creator:
 
 Author: Geir Arne Hjelle
 
@@ -60,3 +63,12 @@ URL: https://realpython.com/python-quiz-application/
 
 Date: 08 June, 2022
 
+## 9. License:
+
+Copyright (c) 2022 Geir Arne Hjelle
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
